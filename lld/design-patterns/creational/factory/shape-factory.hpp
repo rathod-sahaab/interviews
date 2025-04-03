@@ -9,7 +9,7 @@ enum ShapeKind {
 };
 
 // interface
-class ShapeFactoryInterface {
+class ShapeFactory {
 public:
   virtual Shape *createShape(ShapeKind) = 0;
 };

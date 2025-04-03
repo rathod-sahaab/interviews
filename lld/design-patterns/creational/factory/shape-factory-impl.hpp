@@ -3,10 +3,10 @@
 
 #include "circle.hpp"
 #include "rect.hpp"
-#include "shape-factory-interface.hpp"
+#include "shape-factory.hpp"
 #include "shape.hpp"
 
-class ShapeFactoryImpl : public ShapeFactoryInterface {
+class ShapeFactoryImpl : public ShapeFactory {
   float m_radius;
   float m_length;
   float m_breadth;
