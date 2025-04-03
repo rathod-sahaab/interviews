@@ -1,3 +1,3 @@
-mkdir build
+mkdir build -p
 clang++ main.cpp -o build/main
 ./build/main

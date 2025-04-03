@@ -5,8 +5,9 @@
 
 class Circle : public Shape {
   float m_radius;
+
 public:
-  Circle(float radius): m_radius{radius} {}
+  Circle(float radius) : m_radius(radius) {}
 
   float area() override {
     const auto radius = this->m_radius;
