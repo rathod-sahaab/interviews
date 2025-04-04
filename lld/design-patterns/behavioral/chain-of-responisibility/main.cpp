@@ -15,8 +15,8 @@ int main(int argc, char *argv[]) {
     for (const auto &[order, amount] : order_amounts) {
       const auto phonepe_chain_res = phonepe->create_payment_url(order, amount);
 
-      std::cout << "[Phonepe chain result] "
-                << phonepe_chain_res.value_or("Failed") << "\n";
+      std::cout << "[PhonePe chain result] (" << amount
+                << "):" << phonepe_chain_res.value_or("Failed") << "\n";
       std::cout << "-------------------------------------------------\n";
     }
     delete phonepe;
@@ -31,8 +31,8 @@ int main(int argc, char *argv[]) {
     for (const auto &[order, amount] : order_amounts) {
       const auto stripe_chain_res = stripe->create_payment_url(order, amount);
 
-      std::cout << "[Stripe chain result] "
-                << stripe_chain_res.value_or("Failed") << "\n";
+      std::cout << "[Stripe chain result] (" << amount
+                << "):" << stripe_chain_res.value_or("Failed") << "\n";
       std::cout << "-------------------------------------------------\n";
     }
     delete phonepe;
